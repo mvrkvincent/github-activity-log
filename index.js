@@ -1,13 +1,17 @@
 const request = require('request')
 const cheerio = require('cheerio')
-const { default: fetch } = require('node-fetch')
 
+
+const generateActivityFlags = (users, coach) => {
+
+}
 
 const checkActivity = async user => {
     let log = await fetchActivityLog(user)
     let logData = Object.values(log)
     let recentActivity = logData.slice(Math.max(logData.length - 14, 0))
-    console.log(recentActivity)
+
+    return recentActivity;
 }
 
 const fetchActivityLog = async user => {
@@ -24,5 +28,8 @@ const fetchActivityLog = async user => {
         })  
     )
 }
+
+
+
 
 checkActivity('mvrkvincent')
