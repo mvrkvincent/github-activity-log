@@ -1,6 +1,5 @@
 const output = {
     'coach': {
-        'Name': 'good',
         'Name': 'not good'
     },
     'coach': {
