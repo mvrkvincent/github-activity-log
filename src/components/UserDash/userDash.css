@@ -1,0 +1,12 @@
+.userDashMain{
+  height: 50%;
+  width: 50%;
+  background-color: white;
+  justify-self: center;
+}
+
+.closeButton{
+  cursor: pointer;
+  position: relative;
+  right: 0px;
+}

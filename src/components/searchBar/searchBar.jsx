@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "./searchBar.css"
 
 const SearchBar = () =>{
@@ -7,7 +7,7 @@ const SearchBar = () =>{
   let searchTerm = (e) => {
     e.preventDefault();
     let user = e.target.value
-    if (user != ""){
+    if (user !== ""){
       addTerm(user)
     } else {
       addTerm("")

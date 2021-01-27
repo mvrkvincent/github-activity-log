@@ -5,6 +5,12 @@
   width: 50%;
 }
 
+.modalDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .dashMain{
   display: flex;
   flex-direction: column;
