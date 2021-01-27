@@ -1,0 +1,8 @@
+.searchMain{
+  display: flex;
+  flex-direction: row;
+}
+
+.searchLable{
+  margin-right: 10px;
+}
