@@ -77,7 +77,7 @@ const UserDashSub = (state) =>{
           onClose={handleClose}
           className="modalDiv"
         >
-          <UserDash />
+          <UserDash data={state.data} />
         </Modal>
       </div>
     );

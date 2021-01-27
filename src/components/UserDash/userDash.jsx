@@ -5,8 +5,17 @@ const UserDash = (state) =>{
 
   return (
     <div className="userDashMain">
-       Hello</div>
-  )
+      <p>{state.data.username}</p>
+      <div>
+        <div>
+          <p>Week 1</p>
+        </div>
+        <div>
+          <p>Week 2</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default UserDash

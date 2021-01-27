@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: 50%;
+  cursor: pointer;
 }
 
 .modalDiv{

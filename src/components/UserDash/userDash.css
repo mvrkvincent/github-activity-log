@@ -3,6 +3,11 @@
   width: 50%;
   background-color: white;
   justify-self: center;
+  border-radius: 25px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .closeButton{
