@@ -4,6 +4,7 @@
   justify-content: space-between;
   width: 50%;
   cursor: pointer;
+  
 }
 
 .modalDiv{
@@ -22,7 +23,15 @@
 .userMain{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-top: 10px;
+  border-top: .5px rgba(0, 0, 0, 0.397) solid;
+  border-bottom: 5px rgba(0, 0, 0, 0.397) solid;
+  border-left: 1px rgba(0, 0, 0, 0.397) solid;
+  border-right: 3px rgba(0, 0, 0, 0.397) solid;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 16px 22px -17px #03153B;
 }
 
 .healthBar{
