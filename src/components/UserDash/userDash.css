@@ -10,8 +10,15 @@
   align-items: center;
 }
 
-.closeButton{
-  cursor: pointer;
-  position: relative;
-  right: 0px;
+
+
+.weeksDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.weekDataDiv{
+  
 }

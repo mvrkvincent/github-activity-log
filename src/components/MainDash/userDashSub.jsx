@@ -36,13 +36,11 @@ const UserDashSub = (state) =>{
     const [open, setOpen] = useState(false);
     
        const handleOpen = (e) => {
-         console.log("Open")
          e.preventDefault()
          setOpen(true);
        };
 
        const handleClose = (e) => {
-          console.log("Close");
          e.preventDefault();
          setOpen(false);
        };

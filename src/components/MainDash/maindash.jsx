@@ -10,25 +10,30 @@ const MainDash = () =>{
   });
   const [orgUserData, setOrgData] = useState({});
   let dataSetup = () => {
-    Object.keys(rawUserData).forEach(key =>{
-      let tempData = {};
-      tempData.week2Raw = rawUserData[key].slice(0,7)
-      tempData.week1Raw = rawUserData[key].slice(7, 14);
-      let week1Data = dayCount(tempData.week1Raw);
-      tempData.week1DayCount = week1Data.dayTotal;
-      tempData.week1CommitCount = week1Data.commitCount;
-      let week2Data = dayCount(tempData.week2Raw);
-      tempData.week2DayCount = week2Data.dayTotal;
-      tempData.week2CommitCount = week2Data.commitCount;
-      tempData.username = key
-       let total = 0;
-       total += dayCalc(tempData.week1DayCount);
-       total += dayCalc(tempData.week2DayCount);
-       total += commitTotal(tempData.week1CommitCount);
-       total += commitTotal(tempData.week2CommitCount);
-       tempData.total = total
-      orgUserData[key] = tempData
-    })
+    if (Object.keys(orgUserData).length === 0) {
+      let preData = {...orgUserData};
+      Object.keys(rawUserData).forEach((key) => {
+        let tempData = {};
+        tempData.week2Raw = rawUserData[key].slice(0, 7);
+        tempData.week1Raw = rawUserData[key].slice(7, 14);
+        let week1Data = dayCount(tempData.week1Raw);
+        tempData.week1DayCount = week1Data.dayTotal;
+        tempData.week1CommitCount = week1Data.commitCount;
+        let week2Data = dayCount(tempData.week2Raw);
+        tempData.week2DayCount = week2Data.dayTotal;
+        tempData.week2CommitCount = week2Data.commitCount;
+        tempData.username = key;
+        let total = 0;
+        total += dayCalc(tempData.week1DayCount);
+        total += dayCalc(tempData.week2DayCount);
+        total += commitTotal(tempData.week1CommitCount);
+        total += commitTotal(tempData.week2CommitCount);
+        tempData.total = total;
+        preData[key] = tempData;
+      });
+      setOrgData(preData)
+    } 
+
   };
 
     let dayCalc = (num) => {
