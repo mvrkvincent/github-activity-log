@@ -37,3 +37,15 @@
   margin: 9px;
   text-align: center;
 }
+
+.dayArr{
+  display: flex;
+  flex-direction: row;
+  font-size: medium;
+}
+
+.dayArrEl{
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
